@@ -23,8 +23,8 @@
                 'date' => date("Y-m-d"),
             ];
             $batch = $this->db
-        				->table('batches')
-						->create($values);
+        		->table('batches')
+			->create($values);
         }
 
         /*
@@ -35,9 +35,9 @@
         public function getCurrentBatch():int
         {
             $currentBatch = $this->db->table('batches')
-						->select(['id'])
-						->where('date','=', date("Y-m-d"))
-						->get();
+				->select(['id'])
+				->where('date','=', date("Y-m-d"))
+				->get();
 
             return $currentBatch;
         }
