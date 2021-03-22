@@ -32,6 +32,11 @@
         				->table('consignments')
 						->create($values);
         }
+	 /*
+        |--------------------------------------------------------------------------
+        | Get all the consignments of the day with their unique_number and the id of the courier
+        |--------------------------------------------------------------------------
+        */
         public function getCurrentConsignments():array
         {
             $consignments = $this->db
